@@ -25,11 +25,11 @@ class DiscountBanner extends StatelessWidget {
         TextSpan(
           style: TextStyle(color: Colors.white),
           children: [
-            TextSpan(text: "A Summer Surpise\n"),
+            TextSpan(text: "夏季大放价\n"),
             TextSpan(
-              text: "Cashback 20%",
+              text: "全场1折起",
               style: TextStyle(
-                fontSize: getProportionateScreenWidth(24),
+                fontSize: getProportionateScreenWidth(22),
                 fontWeight: FontWeight.bold,
               ),
             ),
