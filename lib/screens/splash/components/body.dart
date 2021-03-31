@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/constants.dart';
-import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
+import 'package:shop_app/screens/home/home_screen.dart';
 import 'package:shop_app/size_config.dart';
 
 // This is the best practice
+import '../../home/home_screen.dart';
 import '../components/splash_content.dart';
 import '../../../components/default_button.dart';
 
@@ -15,19 +16,12 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   int currentPage = 0;
   List<Map<String, String>> splashData = [
+    {"text": "欢迎来到aj600 潮流运动随心所欲!", "image": "assets/images/splash_1.png"},
     {
-      "text": "Welcome to Tokoto, Let’s shop!",
-      "image": "assets/images/splash_1.png"
-    },
-    {
-      "text":
-          "We help people conect with store \naround United State of America",
+      "text": "aj600与多个知名品牌合作 \n价格更低质量更优",
       "image": "assets/images/splash_2.png"
     },
-    {
-      "text": "We show the easy way to shop. \nJust stay at home with us",
-      "image": "assets/images/splash_3.png"
-    },
+    {"text": "最低价格保证 \n三倍差价返还", "image": "assets/images/splash_3.png"},
   ];
   @override
   Widget build(BuildContext context) {
@@ -68,9 +62,9 @@ class _BodyState extends State<Body> {
                     ),
                     Spacer(flex: 3),
                     DefaultButton(
-                      text: "Continue",
+                      text: "好的",
                       press: () {
-                        Navigator.pushNamed(context, SignInScreen.routeName);
+                        Navigator.pushNamed(context, HomeScreen.routeName);
                       },
                     ),
                     Spacer(),
