@@ -6,7 +6,10 @@ import 'section_title.dart';
 class SpecialOffers extends StatelessWidget {
   const SpecialOffers({
     Key key,
+    @required this.category,
   }) : super(key: key);
+
+  final List<Map<String, Object>> category;
 
   @override
   Widget build(BuildContext context) {
@@ -23,27 +26,16 @@ class SpecialOffers extends StatelessWidget {
         SizedBox(height: getProportionateScreenWidth(20)),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-          child: Row(
-            children: [
-              SpecialOfferCard(
-                image: "assets/products/1.png",
-                category: "Yeezy 350 V2",
-                text: "椰子350V2 天使",
-                press: () {
-                  //id 45127338
-                },
-              ),
-              SpecialOfferCard(
-                image: "assets/products/2.png",
-                category: "Yeezy Boost 350 V2",
-                text: "CLAY 美洲限定",
-                press: () {
-                  //id 53880838
-                },
-              ),
-              SizedBox(width: getProportionateScreenWidth(20)),
-            ],
-          ),
+          child: Row(children: [
+            ...test.map(
+              (e) => SpecialOfferCard(
+                  image: "assets/products/" + e["image"] + ".png",
+                  category: "Yeezy 350 V2",
+                  text: "椰子350V2 天使",
+                  press: e["press"]),
+            ),
+            SizedBox(width: getProportionateScreenWidth(20)),
+          ]),
         ),
       ],
     );

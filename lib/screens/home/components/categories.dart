@@ -3,15 +3,14 @@ import 'package:flutter/material.dart';
 import '../../../size_config.dart';
 
 class Categories extends StatelessWidget {
+  const Categories({
+    Key key,
+    @required this.categories,
+  }) : super(key: key);
+  final List<Map<String, dynamic>> categories;
+
   @override
   Widget build(BuildContext context) {
-    List<Map<String, dynamic>> categories = [
-      {"text": "Nike", "id": "nike"},
-      {"text": "Yeezy", "id": "yeezy"},
-      {"text": "Puma", "id": "puma"},
-      {"text": "Supreme", "id": "supreme"},
-      {"text": "Asics", "id": "asics"},
-    ];
     return Padding(
       padding: EdgeInsets.all(getProportionateScreenWidth(20)),
       child: Row(
