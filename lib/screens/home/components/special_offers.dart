@@ -16,7 +16,7 @@ class SpecialOffers extends StatelessWidget {
           padding:
               EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
           child: SectionTitle(
-            title: "Special for you",
+            title: "Yeezy",
             press: () {},
           ),
         ),
@@ -26,16 +26,20 @@ class SpecialOffers extends StatelessWidget {
           child: Row(
             children: [
               SpecialOfferCard(
-                image: "assets/images/Image Banner 2.png",
-                category: "Smartphone",
-                numOfBrands: 18,
-                press: () {},
+                image: "assets/products/1.png",
+                category: "Yeezy 350 V2",
+                text: "椰子350V2 天使",
+                press: () {
+                  //id 45127338
+                },
               ),
               SpecialOfferCard(
-                image: "assets/images/Image Banner 3.png",
-                category: "Fashion",
-                numOfBrands: 24,
-                press: () {},
+                image: "assets/products/2.png",
+                category: "Yeezy Boost 350 V2",
+                text: "CLAY 美洲限定",
+                press: () {
+                  //id 53880838
+                },
               ),
               SizedBox(width: getProportionateScreenWidth(20)),
             ],
@@ -51,12 +55,12 @@ class SpecialOfferCard extends StatelessWidget {
     Key key,
     @required this.category,
     @required this.image,
-    @required this.numOfBrands,
+    @required this.text,
     @required this.press,
   }) : super(key: key);
 
   final String category, image;
-  final int numOfBrands;
+  final String text;
   final GestureTapCallback press;
 
   @override
@@ -104,7 +108,7 @@ class SpecialOfferCard extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        TextSpan(text: "$numOfBrands Brands")
+                        TextSpan(text: "$text")
                       ],
                     ),
                   ),
