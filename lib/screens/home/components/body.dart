@@ -26,6 +26,33 @@ class Body extends StatelessWidget {
               {"text": "Superga", "id": "superga"},
             ]),
             SpecialOffers(
+              title: "Air jordan",
+              category: [
+                {
+                  "image": "3",
+                  "category": "Air Jordan1 low AJ1",
+                  "text": "漆皮黑金脚趾男款",
+                  "press": () {}
+                },
+                {
+                  "image": "4",
+                  "category": "Air Jordan 1 Mid AJ1",
+                  "text": "六冠王 黑白橙脚趾",
+                  "press": () {}
+                }
+              ],
+              onPress: () {},
+            ),
+            SizedBox(height: getProportionateScreenWidth(10)),
+            Categories(categories: [
+              {"text": "Yeezy", "id": "yeezy"},
+              {"text": "匡威", "id": "converse"},
+              {"text": "加拿大鹅", "id": "canadagoose"},
+              {"text": "新百伦", "id": "newbalance"},
+              {"text": "鬼冢虎", "id": "onitsukatiger"},
+            ]),
+            SpecialOffers(
+              title: "Yeezy",
               category: [
                 {
                   "image": "1",
@@ -40,15 +67,8 @@ class Body extends StatelessWidget {
                   "press": () {}
                 }
               ],
+              onPress: () {},
             ),
-            SizedBox(height: getProportionateScreenWidth(10)),
-            Categories(categories: [
-              {"text": "Yeezy", "id": "yeezy"},
-              {"text": "匡威", "id": "converse"},
-              {"text": "加拿大鹅", "id": "canadagoose"},
-              {"text": "新百伦", "id": "newbalance"},
-              {"text": "鬼冢虎", "id": "onitsukatiger"},
-            ]),
             SizedBox(height: getProportionateScreenWidth(10)),
             Categories(categories: [
               {"text": "Puma", "id": "puma"},
@@ -57,6 +77,24 @@ class Body extends StatelessWidget {
               {"text": "Y-3", "id": "Y-3"},
               {"text": "Arcteryx", "id": "arcteryx"},
             ]),
+            SpecialOffers(
+              title: "Puma",
+              category: [
+                {
+                  "image": "5",
+                  "category": "Puma彪马女鞋",
+                  "text": "蕾哈娜厚底增高松糕鞋",
+                  "press": () {}
+                },
+                {
+                  "image": "6",
+                  "category": "PUMA彪马女鞋",
+                  "text": "新款Cali运动休闲鞋厚底耐磨板鞋",
+                  "press": () {}
+                }
+              ],
+              onPress: () {},
+            ),
             SizedBox(height: getProportionateScreenWidth(30)),
             PopularProducts(),
             SizedBox(height: getProportionateScreenWidth(30)),
